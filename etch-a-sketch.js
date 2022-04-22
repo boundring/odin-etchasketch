@@ -46,10 +46,7 @@ function setGridSides (sideCount) {
 
 // A3b
 function setGridTemplateColumns () {
-  gridTemplateColumnsString = "auto";
-  for (let i = 1; i < gridSides; i++) {
-    gridTemplateColumnsString += " auto";
-  }
+  gridTemplateColumnsString = `repeat(${gridSides}, auto)`;
   squareGrid.style.gridTemplateColumns = gridTemplateColumnsString;
 }
 
